@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_order/pages/login_page.dart';
+import 'package:food_order/pages/signup_page.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName='/home_page';
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                        shape: RoundedRectangleBorder(
                          borderRadius: BorderRadius.circular(30),
                        ),
-                       onPressed: (){
+                       onPressed: () async{
                          Navigator.pushReplacementNamed(context, LoginPage.routeName);
                        },
                        child: Text("Login", style: TextStyle(color: Colors.white),),
@@ -66,7 +67,9 @@ class _HomePageState extends State<HomePage> {
                        shape: RoundedRectangleBorder(
                          borderRadius: BorderRadius.circular(30),
                        ),
-                       onPressed: (){},
+                       onPressed: () async{
+                         Navigator.pushReplacementNamed(context, SignupPage.routeName);
+                       },
                        child: Text("SignUp", style: TextStyle(color: Colors.white),),
                      ),
                    ),
